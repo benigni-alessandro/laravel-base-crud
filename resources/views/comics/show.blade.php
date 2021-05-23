@@ -12,9 +12,10 @@
             <p><strong>Serie: </strong>{{$comic->series}}</p>
             <p><strong>Sale date: </strong>{{$comic->sale_date}}</p>
             <p><strong>Type: </strong>{{$comic->type}}</p>
+            <p><strong>Price: </strong>{{$comic->price}}€</p>
           </div>
-          <a href="{{route('comics.index')}}">Torna indietro</a>
         </div>
+        <a href="{{route('comics.index')}}">Torna indietro</a>
       </div>
     </div>
   </div>

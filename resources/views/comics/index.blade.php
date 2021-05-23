@@ -14,8 +14,15 @@
                 <p><strong>Serie: </strong>{{$comic->series}}</p>
                 <p><strong>Sale date: </strong>{{$comic->sale_date}}</p>
                 <p><strong>Type: </strong>{{$comic->type}}</p>
+                <p><strong>Price: </strong>{{$comic->price}}€</p>
+                <a href="{{route('comics.edit', ['comic'=>$comic->id])}}"><i class="fas fa-edit"></i></a>
               </div>
             </div>
+            <form class="delete" action="{{route('comics.destroy', ['comic'=>$comic->id])}}" method="post">
+              @csrf
+              @method('DELETE')
+              <input type="submit" name="Delete" value="Delete">
+            </form>
           </a>
           @endforeach
         </div>
